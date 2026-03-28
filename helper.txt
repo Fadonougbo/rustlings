@@ -1,0 +1,22 @@
+contunu avec move_sem4 
+recherche sur Some et unwrap
+
+
+    let mut v = vec![1, 2, 3, 4, 5];
+
+    let first = &v[0];
+
+    v.push(6);
+
+    println!("The first element is: {first}");
+
+    ***********************
+       let v = vec![100, 32, 57];
+    for i in &v {
+        println!("{i}");
+    }
+
+    ********************************
+    let a = [1, 2, 3];
+
+let mut iter = a.iter().map(|x| 2 * x);
