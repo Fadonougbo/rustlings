@@ -4,9 +4,19 @@ struct Point {
     y: u64,
 }
 
+
+
 #[derive(Debug)]
 enum Message {
     // TODO: Define the different variants used below.
+    Resize {
+        width:i32,
+        height:i32
+    },
+    Quit,
+    Move(Point),
+    Echo(String),
+    ChangeColor(u32,u32,u32)
 }
 
 impl Message {
@@ -16,6 +26,7 @@ impl Message {
 }
 
 fn main() {
+
     let messages = [
         Message::Resize {
             width: 10,
@@ -30,4 +41,5 @@ fn main() {
     for message in &messages {
         message.call();
     }
+
 }

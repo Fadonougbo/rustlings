@@ -1,22 +1,29 @@
-contunu avec move_sem4 
-recherche sur Some et unwrap
 
+continu avec enums3
+____________________________________
+fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
+        if weight_in_grams < 10 {
+            // This isn't how you should handle errors in Rust, but we will
+            // learn about error handling later.
+            panic!("Can't ship a package with weight below 10 grams");
+        }
 
-    let mut v = vec![1, 2, 3, 4, 5];
-
-    let first = &v[0];
-
-    v.push(6);
-
-    println!("The first element is: {first}");
-
-    ***********************
-       let v = vec![100, 32, 57];
-    for i in &v {
-        println!("{i}");
+        Self {
+            sender_country,
+            recipient_country,
+            weight_in_grams,
+        }
     }
 
-    ********************************
-    let a = [1, 2, 3];
+_____________________________________
 
-let mut iter = a.iter().map(|x| 2 * x);
+Les enums
+
+#[derive(Debug)]
+enum Demo{
+    test
+}
+
+
+
+println!("{:?}", Demo::test); //test
