@@ -1,19 +1,5 @@
 
 continu avec enums3
-____________________________________
-fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Self {
-        if weight_in_grams < 10 {
-            // This isn't how you should handle errors in Rust, but we will
-            // learn about error handling later.
-            panic!("Can't ship a package with weight below 10 grams");
-        }
-
-        Self {
-            sender_country,
-            recipient_country,
-            weight_in_grams,
-        }
-    }
 
 _____________________________________
 
@@ -24,6 +10,21 @@ enum Demo{
     test
 }
 
-
-
 println!("{:?}", Demo::test); //test
+------------------------------------------
+
+
+ let word = String::from("green");
+
+ &word // transform String en &str
+
+ --------------------------------------
+
+  // format!("{input} world!").to_string()
+
+        let t1=String::from(input);
+
+        let t2=String::from(" world!");
+
+        t1 + &t2
+

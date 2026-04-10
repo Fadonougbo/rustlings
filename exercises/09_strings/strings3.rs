@@ -1,17 +1,35 @@
+use std::ops::Add;
+
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
+    input.trim()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
+
+
+        // format!("{input} world!").to_string()
+
+        let t1=String::from(input);
+
+        let t2=String::from(" world!");
+
+        t1 + &t2
+
+   
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    let inp=input.to_string().replace("cars", "balloons");
+
+    String::from(inp)
 }
 
 fn main() {
     // You can optionally experiment here.
+    compose_me("test");
 }
 
 #[cfg(test)]
